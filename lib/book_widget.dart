@@ -1,3 +1,5 @@
+// vim book_widget.dart
+
 import 'package:flutter/material.dart';
 
 class BookWidget extends StatelessWidget {

@@ -1,4 +1,7 @@
+// vim book_state_notifier.dart
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_counter/book.dart';
 
 // Rivierpod을 사용해 앱전체에서 데이터를 관리할 수 있는 provider를 생성하는 코드입니다.
 // Riverpod은 전역으로 final provider를 생성하여도 아무 문제가 없습니다.
@@ -27,11 +30,4 @@ class BookStateNotifier extends StateNotifier<List<Book>> {
   void removeBook(Book removeBook) {
     state = state.where((book) => book != removeBook).toList();
   }
-}
-
-class Book {
-  final String title;
-  final String description;
-
-  Book({required this.title, required this.description});
 }
