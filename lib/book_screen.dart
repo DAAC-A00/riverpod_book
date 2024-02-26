@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_counter/book.dart';
 import 'package:riverpod_counter/book_add_screen.dart';
 import 'package:riverpod_counter/book_state_notifier.dart';
 import 'package:riverpod_counter/book_widget.dart';
@@ -11,8 +12,8 @@ class BookScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // booksProvider가 관리하는? 값을 가져오게 됩니다.
-    final bookList = ref.watch(booksProvider);
+    // booksProvider가 관리하는 값을 가져오게 됩니다.
+    final List<Book> bookList = ref.watch(booksProvider);
 
     return Scaffold(
       appBar: AppBar(
